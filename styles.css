@@ -49,5 +49,22 @@ button {
     border-radius: 8px;
     width: 25%;
     height: 30px;
-    margin: 10px 0;
+    margin: 10px 0;   
 }
+
+button:hover {
+    background: #78daa2;
+    -webkit-box-shadow: inset 0px 0px 5px #419f6a;
+       -moz-box-shadow: inset 0px 0px 5px #419f6a;
+            box-shadow: inset 0px 0px 5px #419f6a;
+     outline: none;
+  }
+
+  button:active {
+    background: #418f63;
+    -webkit-box-shadow: inset 0px 0px 5px #419f6a;
+       -moz-box-shadow: inset 0px 0px 5px #419f6a;
+            box-shadow: inset 0px 0px 5px #419f6a;
+     outline: none;
+  }
+

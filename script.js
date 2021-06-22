@@ -75,17 +75,19 @@ function init() {
    //DOM manipulation
    function getLaunchReport() {
       faultyItems.style.visibility = "visible";
-      pilotName.innerHTML = `${pilotNameInput.value} is ready for launch`;                 
-      copilotName.innerHTML = `${copilotNameInput.value} is ready for launch`;
+      pilotName.innerHTML = `Pilot ${pilotNameInput.value} is ready for launch`;                 
+      copilotName.innerHTML = `Copilot ${copilotNameInput.value} is ready for launch`;
+      
     
     //Check if fuel level and cargo mass are acceptable
     if (fuelLevelInput.value < 10000) {
         // DOM manipulation for fuel level
+
         document.getElementById("fuelStatus").innerHTML = "Fuel level too low for launch.";
         launchStatus.innerHTML = "Shuttle not ready for launch.";
         launchStatus.style.color = "red";
     }
-
+  
     if (cargoMassInput.value > 10000) {
         // DOM manipulation for cargo mass
         document.getElementById("cargoStatus").innerHTML = "Cargo mass too high for launch.";
@@ -95,8 +97,12 @@ function init() {
 
     if (cargoMassInput.value < 10000 && fuelLevelInput.value > 10000) {
        // DOM manipulation for mission success
-        launchStatus.innerHTML = "Shuttle is ready for launch.";
-        launchStatus.style.color = "green";
+      
+
+      document.getElementById("fuelStatus").innerHTML = "Fuel level is high enough for launch.";
+      document.getElementById("cargoStatus").innerHTML = "Cargo mass is low enough for launch.";
+      launchStatus.innerHTML = "Shuttle is ready for launch.";
+      launchStatus.style.color = "green";
     }
    }
 
